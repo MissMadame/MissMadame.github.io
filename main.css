@@ -1,0 +1,77 @@
+body {
+  cursor: url('resources/cursor.png'), auto;
+  /* cursor: none; */
+
+}
+
+.card {
+  /* width: 130px;
+  height: 195px; */
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+
+}
+
+.card .img-top {
+  display: none;
+  height: 5vh;
+}
+
+.card .img-bot {
+  display: flex;
+  height: 5vh;
+}
+
+.card:hover .img-top {
+  display: flex;
+  cursor: url('resources/cursor_hover.png'), auto;
+}
+
+.card:hover .img-bot {
+  display: none;
+}
+
+.navbarButton {
+  margin-right: 3vw;
+  margin-left: 3vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.navbarButtonText {
+  text-decoration: none;
+  color: #eaeaea;
+}
+
+.backgroundmainpage {
+  /* background-color: brown; */
+}
+
+.bigLogoImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.topBanner {
+  height: 64vh;
+  width: 100vw;
+  background-image: url('resources/TopBackground.png');
+  background-size: cover;
+}
+
+.galleryContainer {
+  background-color: #202020;
+  height: 100px;
+}
+
+.tmp {
+  height: 100px;
+  background-color: aqua;
+}
+
+.tmpp {
+  height: 100px;
+  background-color: rgb(187, 36, 198);
+}
