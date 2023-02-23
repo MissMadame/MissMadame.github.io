@@ -1,8 +1,31 @@
 body {
   cursor: url('resources/cursor.png'), auto;
   /* cursor: none; */
+  font-family: 'Montserrat', sans-serif;
 
 }
+
+.forCursor {
+  cursor: url('resources/cursor.png'), auto;
+}
+
+a {
+  cursor: url('resources/cursor_hover.png'), auto;
+}
+
+.aboutContainer {
+  background-color: #eaeaea;
+}
+
+.backButton {
+  display: flex;
+  transition: transform 0.3s ease-in;
+}
+
+.backButton:hover {
+  transform: translateX(-5px);
+}
+
 
 .card {
   /* width: 130px;
@@ -25,7 +48,6 @@ body {
 
 .card:hover .img-top {
   display: flex;
-  cursor: url('resources/cursor_hover.png'), auto;
 }
 
 .card:hover .img-bot {
@@ -45,7 +67,7 @@ body {
 }
 
 .backgroundmainpage {
-  /* background-color: brown; */
+  background-color: #202020;
 }
 
 .bigLogoImage {
@@ -56,14 +78,13 @@ body {
 
 .topBanner {
   height: 64vh;
-  width: 100vw;
+  /* width: 100vw; */
   background-image: url('resources/TopBackground.png');
   background-size: cover;
 }
 
 .galleryContainer {
-  background-color: #202020;
-  height: 100px;
+  cursor: url('resources/cursor.png'), auto;
 }
 
 .tmp {
@@ -74,4 +95,13 @@ body {
 .tmpp {
   height: 100px;
   background-color: rgb(187, 36, 198);
+}
+
+.art {
+  border-radius: 2%;
+  transition: transform .3s ease;
+}
+
+.art:hover {
+  transform: scale(1.3);
 }
