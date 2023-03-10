@@ -38,12 +38,12 @@ a {
 
 .card .img-top {
   display: none;
-  height: 5vh;
+  height: 3vh;
 }
 
 .card .img-bot {
   display: flex;
-  height: 5vh;
+  height: 3vh;
 }
 
 .card:hover .img-top {
