@@ -77,7 +77,7 @@ a {
 }
 
 .topBanner {
-  height: 64vh;
+  /* height: 64vh; */
   /* width: 100vw; */
   background-image: url('resources/TopBackground.png');
   background-size: cover;
