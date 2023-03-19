@@ -20,6 +20,7 @@ a {
 .backButton {
   display: flex;
   transition: transform 0.3s ease-in;
+  margin-right: 90vw;
 }
 
 .backButton:hover {
