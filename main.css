@@ -1,108 +1,105 @@
 body {
-  cursor: url('resources/cursor.png'), auto;
-  /* cursor: none; */
-  font-family: 'Montserrat', sans-serif;
-
+    cursor: url("resources/cursor.png"), auto;
+    /* cursor: none; */
+    font-family: "Montserrat", sans-serif;
 }
 
 .forCursor {
-  cursor: url('resources/cursor.png'), auto;
+    cursor: url("resources/cursor.png"), auto;
 }
 
 a {
-  cursor: url('resources/cursor_hover.png'), auto;
+    cursor: url("resources/cursor_hover.png"), auto;
 }
 
 .aboutContainer {
-  background-color: #eaeaea;
+    background-color: #eaeaea;
 }
 
 .backButton {
-  display: flex;
-  transition: transform 0.3s ease-in;
-  margin-right: 90vw;
+    display: flex;
+    transition: transform 0.3s ease-in;
+    margin-right: 90vw;
 }
 
 .backButton:hover {
-  transform: translateX(-5px);
+    transform: translateX(-5px);
 }
 
-
 .card {
-  /* width: 130px;
+    /* width: 130px;
   height: 195px; */
-  position: relative;
-  display: inline-block;
-  background-color: transparent;
-
+    position: relative;
+    display: inline-block;
+    background-color: transparent;
 }
 
 .card .img-top {
-  display: none;
-  height: 3vh;
+    display: none;
+    height: 3vh;
 }
 
 .card .img-bot {
-  display: flex;
-  height: 3vh;
+    display: flex;
+    height: 3vh;
 }
 
 .card:hover .img-top {
-  display: flex;
+    display: flex;
 }
 
 .card:hover .img-bot {
-  display: none;
+    display: none;
 }
 
 .navbarButton {
-  margin-right: 3vw;
-  margin-left: 3vw;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 .navbarButtonText {
-  text-decoration: none;
-  color: #eaeaea;
+    text-decoration: none;
+    color: #eaeaea;
 }
 
 .backgroundmainpage {
-  background-color: #202020;
+    background-color: #202020;
 }
 
 .bigLogoImage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .topBanner {
-  /* height: 64vh; */
-  /* width: 100vw; */
-  background-image: url('resources/TopBackground2.png');
-  background-size: cover;
+    /* height: 64vh; */
+    /* width: 100vw; */
+    background-image: url("https://lh3.googleusercontent.com/drive-viewer/AK7aPaD5KvoxfUzIfXCNZZtSmZapL7lYw0ox5YeWkwafFWlWfPlT2R8m74KzuWpdINfAw2vF7Glh2Zore16fHEyAPxc1KZSt4w=s1600");
+    background-size: cover;
 }
 
 .galleryContainer {
-  cursor: url('resources/cursor.png'), auto;
+    cursor: url("resources/cursor.png"), auto;
 }
 
 .tmp {
-  height: 100px;
-  background-color: aqua;
+    height: 100px;
+    background-color: aqua;
 }
 
 .tmpp {
-  height: 100px;
-  background-color: rgb(187, 36, 198);
+    height: 100px;
+    background-color: rgb(187, 36, 198);
 }
 
 .art {
-  border-radius: 2%;
-  transition: transform .3s ease;
+    border-radius: 2%;
+    transition: transform 0.3s ease;
 }
 
 .art:hover {
-  transform: scale(1.1);
+    transform: scale(1.1);
 }

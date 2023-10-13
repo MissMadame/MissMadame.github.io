@@ -1,74 +1,156 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Sophie Feng</title>
+        <link rel="stylesheet" href="../main.css" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+            crossorigin="anonymous"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="../resources/tabIcon.png" />
+    </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sophie Feng</title>
-  <link rel="stylesheet" href="../main.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <link rel="icon" href="../resources/tabIcon.png">
-</head>
+    <body class="backgroundmainpage">
+        <!-- <h1>Hello, world!</h1> -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"
+        ></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/mouseee@{version}/lib/index.js" type="module"></script> -->
 
-<body class="backgroundmainpage">
-  <!-- <h1>Hello, world!</h1> -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-    crossorigin="anonymous"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/mouseee@{version}/lib/index.js" type="module"></script> -->
+        <div class="card-header" style="background-color: #202020">
+            <a href="../index.html">
+                <img
+                    src="../resources/SF_logo.png"
+                    style="height: 3vh; margin: 1vh"
+                />
+            </a>
 
-  <div class="card-header" style="background-color: #202020;">
-    <a href="../index.html">
-      <img src="../resources/SF_logo.png" style="height: 3vh; margin: 1vh;">
-    </a>
+            <ul
+                class="nav nav-pills card-header-pills"
+                style="background-color: transparent; float: right"
+            >
+                <li
+                    class="nav-item navbarButton card"
+                    style="background-color: transparent"
+                >
+                    <a class="navbarButtonText" href="../index.html">
+                        <img
+                            src="../resources/home.png"
+                            class="img-bot"
+                            alt="Card Back"
+                        />
+                        <img
+                            src="../resources/home_hover.png"
+                            class="img-top"
+                            alt="Card Front"
+                        />
+                    </a>
+                </li>
+                <li
+                    class="nav-item navbarButton card"
+                    style="background-color: transparent"
+                >
+                    <a class="navbarButtonText" href="../about.html">
+                        <img
+                            src="../resources/about.png"
+                            class="img-bot"
+                            alt="Card Back"
+                        />
+                        <img
+                            src="../resources/about_hover.png"
+                            class="img-top"
+                            alt="Card Front"
+                        />
+                    </a>
+                </li>
+            </ul>
+        </div>
 
-    <ul class="nav nav-pills card-header-pills" style="background-color: transparent; float: right;">
-      <li class="nav-item navbarButton card" style="background-color: transparent;">
-        <a class="navbarButtonText" href="../index.html">
-          <img src="../resources/home.png" class="img-bot" alt="Card Back">
-          <img src="../resources/home_hover.png" class="img-top" alt="Card Front">
-        </a>
-      </li>
-      <li class="nav-item navbarButton card" style="background-color: transparent;">
-        <a class="navbarButtonText" href="../about.html">
-          <img src="../resources/about.png" class="img-bot" alt="Card Back">
-          <img src="../resources/about_hover.png" class="img-top" alt="Card Front">
-        </a>
-      </li>
-    </ul>
-  </div>
+        <div
+            class="aboutContainer d-flex justify-content-center"
+            style="width: 100%; height: 100%"
+        >
+            <a
+                onclick="history.back()"
+                style="position: absolute; margin-top: 20px"
+            >
+                <img src="../resources/back.png" class="backButton" />
+            </a>
+            <div
+                class="aboutContainer d-flex flex-column"
+                style="
+                    margin-left: 24%;
+                    margin-right: 24%;
+                    font-family: 'Montserrat', sans-serif;
+                "
+            >
+                <div class="d-flex flex-wrap" style="margin-top: 5vh">
+                    <img
+                        src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaDVo89J77mH5mrvvM0q35vrDyhBFM7e7AhBh8AI0hyXfmaNk3HuaBX26G-lvJY_6RCzz4lNp7QD8rrvvU2jGTdH2NKb9A=s1600"
+                        style="
+                            width: 49%;
+                            margin-bottom: 10px;
+                            margin-right: 2%;
+                        "
+                    />
+                    <img
+                        src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaB-X5BaH9qInHq2IqbFNl7pdJSiEclnqBSWUP18VZzG9gAVUwPULycmdw0u6pc0OFK7LgZaV_UzWMoic2IBEfvlmAY2bg=s1600"
+                        style="width: 49%; margin-bottom: 10px"
+                    />
+                    <img
+                        src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaDxlBHmHtIkEh4FGSdwNjnJJYbQOCDSqESr_PXwzuhylPAbwhjfc9ihxNRtAMmyE7cRaFdR3HFGnlUId91xNkTRfqzhuA=s1600"
+                        style="
+                            width: 49%;
+                            margin-bottom: 10px;
+                            margin-right: 2%;
+                        "
+                    />
+                    <img
+                        src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaBbHvFhEkUS2a1yDkwOmd0utvS-_yw7xbajZ54hDeFwRbmPfW7oKFHoqUhDrSoxW3YVmKT5o22eDck2Sk3VcZD4c7PdQA=s1600"
+                        style="width: 49%; margin-bottom: 10px"
+                    />
+                </div>
+                <img
+                    src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaAL6x9AlBosOy8TIfkj9xKMsagQSHJAgXgReLluEt1L5nFiOv-A7E6kRCMkeZ2CU-IuTb0njW2M7hyxpOHtVHV-RTSk=s1600"
+                    style="
+                        width: 75%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 5%;
+                    "
+                />
+                <img
+                    src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaCpTyUdpONVHuwJ0-J5SyrfGRdu4I2g8y6nrzb8FoqHXbfj8TZwB-S9HhlfUy2FlD-_mLmqdBjKPeDqn5fKanKLlw8HKQ=s1600"
+                    style="width: 100%; margin-left: auto; margin-right: auto"
+                />
+                <img
+                    src="https://lh3.googleusercontent.com/drive-viewer/AK7aPaAwqQjEh7laSBIMQ_qZ-xhIql80YOvg9AFQXo0GQh8Gb_qnbW7Qq9z1BxqR2msPWN-RWxoNpIuOKCWq_oDNXDWEsyIYOw=s1600"
+                    style="
+                        width: 100%;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 10px;
+                    "
+                />
 
-  <div class="aboutContainer d-flex justify-content-center" style="width: 100%; height:100%">
-    <a onclick="history.back()" style="position: absolute; margin-top: 20px;">
-      <img src="../resources/back.png" class="backButton">
-    </a>
-    <div class="aboutContainer d-flex flex-column"
-      style="margin-left: 24%; margin-right: 24%; font-family: 'Montserrat', sans-serif;">
-      <div class="d-flex flex-wrap" style="margin-top: 5vh;">
-        <img src="../resources/5.png" style="width: 49%; margin-bottom: 10px; margin-right: 2%;">
-        <img src="../resources/5.1-min.png" style="width: 49%; margin-bottom: 10px;">
-        <img src="../resources/5.2.PNG" style="width: 49%; margin-bottom: 10px; margin-right: 2%;">
-        <img src="../resources/5.3-min.png" style="width: 49%; margin-bottom: 10px">
-      </div>
-      <img src="../resources/5.4-min.png" style="width: 75%; margin-left: auto; margin-right: auto; margin-top: 5%;">
-      <img src="../resources/5.5.png" style="width: 100%; margin-left: auto; margin-right: auto;">
-      <img src="../resources/5.6.png" style="width: 100%; margin-left: auto; margin-right: auto; margin-top: 10px;">
-
-      <p style="text-align: center; margin-top: 10px;"><b>YONOKONO Flavored Beer Packaging Design</b><br>4 *4 inches,
-        Digital media, 2022
-      </p>
-    </div>
-
-  </div>
-  <div class="aboutContainer" style="height: 50vh"></div>
-
-
-</body>
-
+                <p style="text-align: center; margin-top: 10px">
+                    <b>YONOKONO Flavored Beer Packaging Design</b><br />4 *4
+                    inches, Digital media, 2022
+                </p>
+            </div>
+        </div>
+        <div class="aboutContainer" style="height: 50vh"></div>
+    </body>
 </html>
