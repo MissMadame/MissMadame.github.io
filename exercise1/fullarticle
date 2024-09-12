@@ -4,13 +4,7 @@
         <title>A Handmade Web</title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
        </head>
     <body><!--all the contents of an HTML document goes here-->
-    </p>The term 'handmade' usually refers to objects made by hand or by using simple tools rather
-than machines. The result may be homely — as in a child's clay ashtray — or exquisite — as in
-a pair of bespoke brogues.
-<br>
-<br>
-<a href="exercise1/fullarticle">click</a>
-<br>
+    </p>
     I evoke the term 'handmade web' to refer to web pages coded by hand rather than by
 software; web pages made and maintained by individuals rather than by businesses or
 corporations; web pages which are provisional, temporary, or one-of-a-kind; web pages
