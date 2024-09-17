@@ -3,13 +3,35 @@
     <head><!-- a container for metadata -->
         <title>A Handmade Web</title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
        </head>
+
+       <style>
+  
+      .text {
+          font-size: 20px;
+          font-family: Helvetica;
+      }
+
+      .bold {
+        font-size: 20px;
+        color: blueviolet;
+        font-family: Helvetica;
+        font-weight: bold;
+        background: linear-gradient(to right, #4f0aff, 
+                    #ff6b08, #cf23cf, #eedd44); 
+            -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+      }
+      
+  </style>
+
+
     <body><!--all the contents of an HTML document goes here-->
-    </p>The term 'handmade' usually refers to objects made by hand or by using simple tools rather
+    <p class="text">The term <strong>'handmade'</strong> usually refers to objects made by hand or by using simple tools rather
 than machines. The result may be homely — as in a child's clay ashtray — or exquisite — as in
 a pair of bespoke brogues.
 <br>
 <br>
-<a href="full article.html">read more</a>
+<p class="bold"><a href="full article.html">Read more</a> </p>
 </p>
     </body>
 </html>
