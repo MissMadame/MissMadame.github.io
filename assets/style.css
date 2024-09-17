@@ -1,0 +1,43 @@
+body{
+    background: rgb(39, 39, 39); 
+}
+
+a:hover {
+    background: linear-gradient(to right, #0aff0e, 
+    #3a68ff, #ff9dff, #ee4444); 
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
+}
+
+.index {
+    font-size: 60px;
+    font-family: Helvetica;
+    background: linear-gradient(to right, #4f0aff, 
+                #ff6b08, #cf23cf, #eedd44); 
+        -webkit-text-fill-color: transparent; 
+        -webkit-background-clip: text; 
+}
+
+.header {
+
+  font-size: 10 px;
+  font-family: Helvetica;
+    color: grey;
+
+}
+
+.text {
+    color: whitesmoke;
+    font-size: 20px;
+    font-family: Helvetica;
+}
+
+.bold {
+  font-size: 20px;
+  font-family: Helvetica;
+  font-weight: bold;
+  background: linear-gradient(to right, #4f0aff, 
+              #ff6b08, #cf23cf, #eedd44); 
+      -webkit-text-fill-color: transparent; 
+      -webkit-background-clip: text; 
+}
