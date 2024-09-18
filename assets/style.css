@@ -1,3 +1,4 @@
+
 @font-face{
     font-family: 'zocalo';
     src: 
@@ -11,11 +12,16 @@
      font-weight: 700;
 }
 
+div {
+display:block;
+border: 2px solid greenyellow;
+margin: 3%;
+padding: 5%;
+border-radius: 30px;
+
+}
 body{
     background: rgb(39, 39, 39); 
-}
-strong{
-    font-weight: 700;
 }
 
 a:hover {
@@ -25,6 +31,22 @@ a:hover {
     -webkit-background-clip: text; 
 }
 
+
+.keyword {
+    color: greenyellow;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid greenyellow;
+    border-radius: 10px;
+    padding: 1px;
+    font-size: 15px
+  }
+
+.keyword:hover{
+    color: hotpink;
+    font-size: 15px
+}
+
 .index {
     font-size: 60px;
     font-family: Helvetica;
@@ -32,10 +54,12 @@ a:hover {
                 #ff6b08, #cf23cf, #eedd44); 
         -webkit-text-fill-color: transparent; 
         -webkit-background-clip: text; 
+
 }
 
 .header {
 
+    
   font-size: 10 px;
   font-family: Helvetica;
     color: grey;
@@ -48,9 +72,9 @@ a:hover {
     font-family:'zocalo';
 }
 
-.bold {
+.readmore {
   font-size: 20px;
-  font-family: Helvetica;
+  font-family: 'zocalo';
   font-weight: bold;
   background: linear-gradient(to right, #4f0aff, 
               #ff6b08, #cf23cf, #eedd44); 
