@@ -12,20 +12,36 @@
      font-weight: 700;
 }
 
+strong{
+    color: hotpink;
+}
+
 div {
 display:block;
-border: 2px solid rgba(172, 255, 47, 0.476);
+border: 2px solid rgb(172, 255, 47);
 margin: 3%;
 padding: 5%;
 border-radius: 30px;
 }
 
+h1{
+font-size: 40px;
+color:rgb(172, 255, 47);
+text-align: center;
+border: 0px solid rgb(172, 255, 47);
+}
+
+h2{
+    font-size: 20px;
+    color:rgb(172, 255, 47);
+    text-align: center;
+    border: 0px solid rgb(172, 255, 47);
+    }
+
 #div1 {
     display:block;
-    background-color:greenyellow;
+    background-color:rgba(172, 255, 47, 0.548);
     color: rgb(39, 39, 39);
-    margin: 3%;
-    padding: 5%;
     border-radius: 30px;
 }
 
