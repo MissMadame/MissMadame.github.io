@@ -14,12 +14,21 @@
 
 div {
 display:block;
-border: 2px solid greenyellow;
+border: 2px solid rgba(172, 255, 47, 0.476);
 margin: 3%;
 padding: 5%;
 border-radius: 30px;
-
 }
+
+#div1 {
+    display:block;
+    background-color:greenyellow;
+    color: rgb(39, 39, 39);
+    margin: 3%;
+    padding: 5%;
+    border-radius: 30px;
+}
+
 body{
     background: rgb(39, 39, 39); 
 }
@@ -42,9 +51,11 @@ a:hover {
     font-size: 15px
   }
 
-.keyword:hover{
-    color: hotpink;
-    font-size: 15px
+a.keyword:hover{
+    font-size: 15px;
+    background:hotpink;
+    -webkit-text-fill-color: transparent; 
+    -webkit-background-clip: text; 
 }
 
 .index {
@@ -59,7 +70,6 @@ a:hover {
 
 .header {
 
-    
   font-size: 10 px;
   font-family: Helvetica;
     color: grey;
