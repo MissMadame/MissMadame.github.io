@@ -1,0 +1,393 @@
+<!DOCTYPE html><!--document type declaration-->
+<html>
+    <head><!-- a container for metadata -->
+        <title>CSSshapes</title><!--declaring the title, or name, of the HTML document. displayed in the browser's title bar-->
+      
+       
+    <style>
+      body{
+        background-color: rgb(39, 39, 39);
+    }
+
+        p{
+            font-family: Helvetica;
+            color:white;
+            text-align: center;
+            
+        }
+
+    .number{
+    color:aliceblue;
+    font-size: 25px;
+    /* padding: 30px    */
+    }
+
+
+
+
+.grid-container {
+  display: grid;
+  align-self: center;
+  grid-template-columns: repeat(2, 3fr); 
+  gap: 20px; 
+  margin: 20px;
+  width: 96%;
+  font-family: helvetica;
+  font-size: 20px;
+  
+}
+
+.letterwrap{
+   margin-left: 30%;
+}
+
+.grid-item {
+  /* justify-content: center;  */
+    background-color: grey;
+    border: solid grey 20px;
+    display: flex;
+    transition-property:border-radius;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+.grid-item:hover{
+  border-radius: 30px;
+ 
+        [class^="stroke-1s"]{
+            border-radius: 50px;
+        }
+
+        [class^="stroke-1r"]{
+            border-top-right-radius: 50px;
+        }
+
+        [class^="stroke-2r"]{
+            border-top-right-radius: 50px;
+            border-top-left-radius: 50px;
+        }
+
+        [class^="stroke-2-3"]{
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+
+        [class^="stroke-3r"]{
+            border-top-right-radius: 50px;
+        }
+
+        [class^="stroke-3-2"]{
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+        }
+
+        [class^="stroke-4s"]{
+            border-radius: 50px;
+        }
+
+        .stroke-5-1{
+            top:55px;
+            background:transparent;
+        }
+
+        .stroke-5-3{
+            top:-55px;
+            
+        }
+
+        .stroke-6-1{
+            top:20px;
+            left:-20px;
+            transform: rotate(0deg);
+        }
+        .stroke-6-2{
+            top:20px;
+            left:-20px;
+            transform: rotate(180deg);
+        }
+
+}
+
+
+[class^="stroke-"]:hover{
+
+}
+
+    [class^="stroke-"]{
+        position: relative;
+        background-color: greenyellow;
+        transition-property: border-radius,background-color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+    }
+
+    .stroke-1r-1{
+        left:50px;
+        width: 150px;
+        height:50px;
+    }
+
+
+    .stroke-1s-2{
+        left:0;
+        width: 50px;
+        height:50px;
+    }
+
+    .stroke-1-3{
+        left:50px;
+        width: 100px;
+        height:50px;
+    }
+
+    .stroke-1s-4{
+        left:150px;
+        width: 50px;
+        height:50px;
+    }
+
+    .stroke-1r-5{
+        left:0;
+        width: 150px;
+        height:50px;
+        transform: rotate(180deg);
+    }
+
+
+
+    .stroke-2r-1{
+        left:0;
+        width: 150px;
+        height:50px;
+    }
+
+    .stroke-2-2{
+        left:0;
+        width: 50px;
+        height:50px;
+    }
+
+    .stroke-2-3{
+        left:0;
+        width: 150px;
+        height:50px;
+    }
+
+    .stroke-2-4{
+        left:100px;
+        width: 50px;
+        height:50px;
+    }
+
+    .stroke-2r-5{
+        left:0;
+        width: 150px;
+        height:50px;
+        transform: rotate(180deg);
+    }
+    .stroke-3-0{
+        background-color: transparent;
+        width: 150px;
+        height:40px;
+    }
+    .stroke-3r-1{
+        width: 150px;
+        height:50px;
+        transform: rotate(-45deg);
+    }
+    .stroke-3-2{
+        left:4px;
+        top:10px;
+        width: 150px;
+        height:50px;
+    }
+
+    .stroke-3r-3{
+        left:8px;
+        top: 20px;
+        width: 150px;
+        height:50px;
+        transform: rotate(-225deg);
+    }
+
+    .stroke-4-1{
+        width: 50px;
+            height: 0;
+            background-color: transparent;
+            border-bottom: 50px solid greenyellow;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            
+        }
+    .stroke-4s-2{
+        width: 50px;
+        height:50px;
+    }
+
+    .stroke-4-3{
+        left:26px;
+        width: 100px;
+        height:50px;
+        transform: skew(45deg);
+    }
+    .stroke-4s-4{
+        left:102px;
+        width: 50px;
+        height:50px;
+    }
+    .stroke-4-5{
+        width: 50px;
+            height: 0;
+            background-color: transparent;
+            border-bottom: 50px solid greenyellow;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            transform: rotate(180deg);
+    }
+
+    .stroke-5-1{
+        position: relative;
+        top:0;
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;  /* Adjust this for triangle width */
+            border-bottom: 100px solid greenyellow;
+            background:transparent;
+            transform: rotate(180deg);
+            
+            transition-duration: 0.3s;
+        transition-property:top,border-bottom;
+        transition-timing-function: ease-in;
+          
+    }
+
+    .stroke-5-2{
+        width: 150px;
+        height:10px;
+     
+    }
+    .stroke-5-3{
+        position: relative;
+        top:0;
+            width: 0;
+            height: 0;
+            border-left: 150px solid transparent;  /* Adjust this for triangle width */
+            border-bottom: 100px solid greenyellow;
+            background:transparent;
+            transition-duration: 0.3s;
+        transition-property:top,background-color;
+        transition-timing-function: ease-in;
+  
+    }
+
+
+    .stroke-6-1{
+        
+        top:10px;
+        left: -40px;
+        width:180px;
+            height: 90px;
+            border-radius: 100px 100px 0 0;
+            transition-property:transform,top,left; 
+        transition-duration: 0.3s;
+        transition-timing-function: ease-in;
+            transform: rotate(-45deg);  
+    }
+
+    .stroke-6-2{
+        top:27px;
+        left: -20px;
+        width: 180px;
+            height: 90px;
+            border-radius: 100px 100px 0 0; 
+        transition-duration: 0.3s;
+        transition-property:transform,top,left;
+        transition-timing-function: ease-in;
+            transform: rotate(135deg);  
+
+    }
+
+
+    </style>
+
+    </head>
+
+
+    <body><!--all the contents of an HTML document goes here-->
+        <p> HOVER TO SEE MORE</p>
+<div class="grid-container">
+    <div class="grid-item">
+        <div class="numberwrap">
+        <p class="number"> ➊</p>
+    </div>
+
+    <div class="letterwrap">
+      <div class="stroke-1r-1"></div>
+     <div class="stroke-1s-2"></div>
+     <div class="stroke-1-3"></div>
+     <div class="stroke-1s-4"></div>
+     <div class="stroke-1r-5"></div>
+    </div>
+
+    </div>
+
+    <div class="grid-item">
+        <div class="numberwrap">
+        <p class="number"> ➋</p>
+    </div>
+        <div class="letterwrap">
+            <div class="stroke-2r-1"></div>
+            <div class="stroke-2-2"></div>
+            <div class="stroke-2-3"></div>
+            <div class="stroke-2-4"></div>
+            <div class="stroke-2r-5"></div>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <p class="number"> ➌  </p>
+        <div class="letterwrap">
+            <div class="stroke-3-0"></div>
+            <div class="stroke-3r-1"></div>
+            <div class="stroke-3-2"></div>
+            <div class="stroke-3r-3"></div>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <p class="number">➍</p>
+        <div class="letterwrap">
+            <div class="stroke-4-1"></div>
+            <div class="stroke-4s-2"></div>
+            <div class="stroke-4-3"></div>
+            <div class="stroke-4s-4"></div>
+            <div class="stroke-4-5"></div>
+        </div>
+
+    </div>
+
+    <div class="grid-item">
+        <p class="number">➎</p>
+            <div class="letterwrap">
+            <div class="stroke-5-1"></div>
+            <div class="stroke-5-2"></div>
+            <div class="stroke-5-3"></div>
+        </div>
+    </div>
+
+    <div class="grid-item">
+        <p class="number"> ➏</p>
+        <div class="letterwrap">
+
+            <div class="stroke-6-1"></div>
+            <div class="stroke-6-2"></div>
+     </div>
+    </div>
+
+
+
+</div>
+
+    </body>
+</html>
+
