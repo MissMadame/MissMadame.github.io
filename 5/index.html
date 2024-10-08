@@ -53,6 +53,9 @@
 
 .grid-item:hover{
   border-radius: 30px;
+  [class^="stroke-"]{
+    background-color: aqua;
+  }
  
         [class^="stroke-1s"]{
             border-radius: 50px;
@@ -106,6 +109,31 @@
             transform: rotate(180deg);
         }
 
+        .stroke-3-0{
+        background-color: transparent;}
+
+        .stroke-4-1{
+            border-bottom:50px solid aqua;
+            background-color: transparent;
+        }
+
+        .stroke-4-5{
+            border-bottom:50px solid aqua;
+            background-color: transparent;
+        }
+
+        .stroke-5-1{
+            border-left: 150px solid transparent;  /* Adjust this for triangle width */
+            border-bottom: 100px solid aqua;
+
+        }
+
+        .stroke-5-3{
+            border-left: 150px solid transparent;  /* Adjust this for triangle width */
+            border-bottom: 100px solid aqua;
+        }
+
+
 }
 
 
@@ -116,7 +144,7 @@
     [class^="stroke-"]{
         position: relative;
         background-color: greenyellow;
-        transition-property: border-radius,background-color;
+        transition-property: border-radius,background-color,border-bottom;
         transition-duration: 0.3s;
         transition-timing-function: ease-in;
     }
@@ -217,6 +245,7 @@
             border-bottom: 50px solid greenyellow;
             border-left: 50px solid transparent;
             border-right: 50px solid transparent;
+
             
         }
     .stroke-4s-2{
