@@ -1,0 +1,115 @@
+
+
+            .header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                background-color: #ffffff;
+                color:#ffffff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px;
+                z-index: 1000; /* Ensures it stays on top of other content */
+            }
+
+            .content {
+            margin-top: 60px; /* Adjust this to match the header height */
+          }
+
+            body.dark-mode {
+                background-color: #121212;
+                color: #ffffff;
+            }
+
+            .column-20.dark-mode,
+            .column-80.dark-mode,
+            .header.dark-mode {
+                background-color: #333;
+                color: #ffffff;
+            }
+
+            .grid-item.dark-mode {
+                background-color: #444;
+            }
+
+           .button1, .button2,.button3,.button4,.button5 {
+            position: fixed;
+            top: 10px;
+            padding: 10px 20px;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+             }
+
+        .button1 {
+            left: 60px;
+            background-color:  blueviolet;
+        }
+        .button2 {
+            left: 100px;
+            background-color: blueviolet;
+        }
+
+        .button3 {
+            left: 140px;
+            background-color:  blueviolet;
+        }
+
+        .button4 {
+            left: 180px;
+            background-color:  blueviolet;
+        }
+
+        .button5 {
+            left: 20px;
+            background-color:  blueviolet;
+        }
+
+        .container {
+            display: flex;
+        }
+        .column-20 {
+            width: 20%;
+            border: solid green 0px;
+            padding: 10px;
+        }
+        .column-80 {
+            width: 80%;
+            border: solid green 0px;
+            padding: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            gap: 20px;
+            
+        }
+        .grid-item {
+            background-color: yellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .grid-item img {
+            max-width: 500px;
+    max-height: 500px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px
+        }
+        .button-container button {
+            padding: 5px 10px;
+            font-size: 14px;
+        }

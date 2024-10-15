@@ -4,255 +4,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>project1</title>
-    <style>
-            body.dark-mode {
-                background-color: #121212;
-                color: #ffffff;
-            }
-
-            .column-20.dark-mode,
-            .column-80.dark-mode {
-                background-color: #333;
-                color: #ffffff;
-            }
-
-            .grid-item.dark-mode {
-                background-color: #444;
-            }
-
-           .button1, .button2,.button3 {
-            position: fixed;
-            top: 10px;
-            padding: 10px 20px;
-            color: white;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-             }
-
-        .button1 {
-            left: 20px;
-            background-color: #4CAF50;
-        }
-        .button2 {
-            left: 60px;
-            background-color: #008CBA;
-        }
-
-        .button3 {
-            left: 100px;
-            background-color: #008CBA;
-        }
-
-        .container {
-            display: flex;
-        }
-        .column-20 {
-            width: 20%;
-            border: solid green 0px;
-            padding: 10px;
-        }
-        .column-80 {
-            width: 80%;
-            border: solid green 0px;
-            padding: 10px;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-rows: repeat(10, 1fr);
-            gap: 10px;
-        }
-        .grid-item {
-            background-color: yellow;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .grid-item img {
-            max-width: 500px;
-    max-height: 500px;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-        }
-
-        .button-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 10px
-        }
-        .button-container button {
-            padding: 5px 10px;
-            font-size: 14px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="button-container">
-        <button class="button1" onclick="scrollUp()">↑</button>
-        <button class="button2" onclick="scrollDown()">↓</button>
-        <button class="button3" onclick="toggleDarkMode()">🌙</button>
-    </div>
-    
-<div class="container">
-    <div class="column-20">
-        <br>
-        <div class="grid-item">
-             <div class="category" onclick="showCategory('homepage')">Homepage</div>
-       </div>
-       <br>
-       <div class="grid-item">
-             <div class="category" onclick="showCategory('category1')">Category 1</div>
-       </div>
-        <br>
-        <div class="grid-item">
-             <div class="category" onclick="showCategory('category2')">Category 2</div>
-         </div>
-        <br>
-
-
-        <div class="grid-item">category3</div>
-        <br>
-        <div class="grid-item">category4</div>
-        <br>
-        <div class="grid-item">category5</div>
-        <br>
-        <div class="grid-item">category6</div>
-        <br>
-        <div class="grid-item">category7</div>
-        <br>
-        <div class="grid-item">category8</div>
-        <br>
-        <div class="grid-item">category9</div>
-        <br>
-        <div class="grid-item">category10</div>
-        <br>
-        <div class="grid-item">categor11</div>
-        <br>
-        <div class="grid-item">category12</div>
-        
-      
-        
-    </div>
-
-    <div class="column-80">
-        <div class="grid">
-            <div class="grid-item" data-category="category1"><img src="../6/image/1.jpg"></div>
-            <div class="grid-item" data-category="category1"><img src="../6/image/2.png"></div>
-            <div class="grid-item" data-category="category1"><img src="../6/image/3.png"></div>
-            <div class="grid-item" data-category="category1"><img src="../6/image/4.png"></div>
-            <div class="grid-item" data-category="category1"><img src="../6/image/5.jpg"></div>
-            <div class="grid-item" data-category="category1"><img src="../6/image/6.png"></div>
-            <div class="grid-item" data-category="category1"><img src="../6/image/7.png"></div>
-            <div class="grid-item" data-category="category1"><img src="../6/image/8.png"></div>
-            <div class="grid-item" data-category="category1"><img src="../6/image/9.png"></div>
-            <div class="grid-item" data-category="category1"><img src="../6/image/10.jpg"></div>
-
-            <div class="grid-item" data-category="category2"><img src="../6/image/11.jpg"></div>
-            <div class="grid-item" data-category="category2"><img src="../6/image/12.png"></div>
-            <div class="grid-item" data-category="category2"><img src="../6/image/13.png"></div>
-            <div class="grid-item" data-category="category2"><img src="../6/image/14.png"></div>
-            <div class="grid-item" data-category="category2"><img src="../6/image/15.jpg"></div>
-            <div class="grid-item" data-category="category2"><img src="../6/image/16.png"></div>
-            <div class="grid-item" data-category="category2"><img src="../6/image/17.png"></div>
-            <div class="grid-item" data-category="category2"><img src="../6/image/18.png"></div>
-            <div class="grid-item" data-category="category2"><img src="../6/image/19.png"></div>
-            <div class="grid-item" data-category="category2"><img src="../6/image/20.jpg"></div>
+    <div class="header">
+        <div class="button-container">
+            <button class="button1" onclick="increaseColumns()">👆</button>
+            <button class="button2" onclick="decreaseColumns()">👇</button>
+            <button class="button3" onclick="toggleDarkMode()">🌙</button>
+            <button class="button4"><a href="about.html">ℹ️</a></button>
+            <button class="button5" onclick="showCategory('homepage')">🏠</button>
             
-            <div class="grid-item"><img src="../6/image/21.png" ></div>
-            <div class="grid-item"><img src="../6/image/22.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/23.png" ></div>
-            <div class="grid-item"><img src="../6/image/24.png"></div>
-            <div class="grid-item"><img src="../6/image/25.png" ></div>
-            <div class="grid-item"><img src="../6/image/26.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/27.png" ></div>
-            <div class="grid-item"><img src="../6/image/28.png"></div>
-            <div class="grid-item"><img src="../6/image/29.png" ></div>
-            <div class="grid-item"><img src="../6/image/30.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/31.png" ></div>
-            <div class="grid-item"><img src="../6/image/32.png"></div>
-            <div class="grid-item"><img src="../6/image/33.png" ></div>
-            <div class="grid-item"><img src="../6/image/10.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/11.png" ></div>
-            <div class="grid-item"><img src="../6/image/12.png"></div>
-            <div class="grid-item"><img src="../6/image/13.png" ></div>
-            <div class="grid-item"><img src="../6/image/14.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/15.png" ></div>
-            <div class="grid-item"><img src="../6/image/16.png"></div>
-            <div class="grid-item"><img src="../6/image/17.png" ></div>
-            <div class="grid-item"><img src="../6/image/18.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/19.png" ></div>
-            <div class="grid-item"><img src="../6/image/20.png"></div>
-            <div class="grid-item"><img src="../6/image/21.png" ></div>
-            <div class="grid-item"><img src="../6/image/22.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/23.png" ></div>
-            <div class="grid-item"><img src="../6/image/24.png"></div>
-            <div class="grid-item"><img src="../6/image/25.png" ></div>
-            <div class="grid-item"><img src="../6/image/26.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/27.png" ></div>
-            <div class="grid-item"><img src="../6/image/28.png"></div>
-            <div class="grid-item"><img src="../6/image/29.png" ></div>
-            <div class="grid-item"><img src="../6/image/30.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/31.png" ></div>
-            <div class="grid-item"><img src="../6/image/32.png"></div>
-            <div class="grid-item"><img src="../6/image/33.png" ></div>
-            <div class="grid-item"><img src="../6/image/34.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/35.png" ></div>
-            <div class="grid-item"><img src="../6/image/36.png"></div>
-            <div class="grid-item"><img src="../6/image/37.png" ></div>
-            <div class="grid-item"><img src="../6/image/38.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/39.png" ></div>
-            <div class="grid-item"><img src="../6/image/40.png"></div>
-            <div class="grid-item"><img src="../6/image/41.png" ></div>
-            <div class="grid-item"><img src="../6/image/42.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/43.png" ></div>
-            <div class="grid-item"><img src="../6/image/44.png"></div>
-            <div class="grid-item"><img src="../6/image/45.png" ></div>
-            <div class="grid-item"><img src="../6/image/46.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/47.png" ></div>
-            <div class="grid-item"><img src="../6/image/48.png"></div>
-            <div class="grid-item"><img src="../6/image/49.png" ></div>
-            <div class="grid-item"><img src="../6/image/50.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/51.png" ></div>
-            <div class="grid-item"><img src="../6/image/52.png"></div>
-            <div class="grid-item"><img src="../6/image/53.png" ></div>
-            <div class="grid-item"><img src="../6/image/54.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/55.png" ></div>
-            <div class="grid-item"><img src="../6/image/56.png"></div>
-            <div class="grid-item"><img src="../6/image/57.png" ></div>
-            <div class="grid-item"><img src="../6/image/58.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/59.png" ></div>
-            <div class="grid-item"><img src="../6/image/60.png"></div>
-            <div class="grid-item"><img src="../6/image/61.png" ></div>
-            <div class="grid-item"><img src="../6/image/62.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/63.png" ></div>
-            <div class="grid-item"><img src="../6/image/64.png"></div>
-            <div class="grid-item"><img src="../6/image/65.png" ></div>
-            <div class="grid-item"><img src="../6/image/66.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/67.png" ></div>
-            <div class="grid-item"><img src="../6/image/68.png"></div>
-            <div class="grid-item"><img src="../6/image/69.png" ></div>
-            <div class="grid-item"><img src="../6/image/70.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/71.png" ></div>
-            <div class="grid-item"><img src="../6/image/72.png"></div>
-            <div class="grid-item"><img src="../6/image/73.png" ></div>
-            <div class="grid-item"><img src="../6/image/74.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/75.png" ></div>
-            <div class="grid-item"><img src="../6/image/76.png"></div>
-            <div class="grid-item"><img src="../6/image/77.png" ></div>
-            <div class="grid-item"><img src="../6/image/78.jpg" ></div>
-            <div class="grid-item"><img src="../6/image/79.png" ></div>
-            <div class="grid-item"><img src="../6/image/80.png"></div>
-            <div class="grid-item"><img src="../6/image/81.png" ></div>
-            <!-- Add additional images here up to 120 -->
-         </div>
+        </div>
+        
+    </div>
+
+    <div class="content">
+
+        <div class="container">
+            <div class="column-20">
+        
+                <div class="grid-item">
+                  
+            </div>
+            <div class="grid-item">
+                    <div class="category" onclick="showCategory('category1')">Category 1</div>
+            </div>
+                <br>
+                <div class="grid-item">
+                    <div class="category" onclick="showCategory('category2')">Category 2</div>
+                </div>
+                <br>
+
+
+                <div class="grid-item">category3</div>
+                <br>
+                <div class="grid-item">category4</div>
+                <br>
+                <div class="grid-item">category5</div>
+                <br>
+                <div class="grid-item">category6</div>
+                <br>
+                <div class="grid-item">category7</div>
+                <br>
+                <div class="grid-item">category8</div>
+                <br>
+                <div class="grid-item">category9</div>
+                <br>
+                <div class="grid-item">category10</div>
+                <br>
+                <div class="grid-item">categor11</div>
+                <br>
+                <div class="grid-item">category12</div>
+                
+            
+                
+            </div>
+
+            <div class="column-80">
+                <div class="grid">
+                    <div class="grid-item" data-category="category1"><img src="../6/image/1.jpg"></div>
+                    <div class="grid-item" data-category="category1"><a href="https://www.cameronsworld.net/"><img src="../6/image/2.png"></a></div>
+                    <div class="grid-item" data-category="category1"><img src="../6/image/3.png"></div>
+                    <div class="grid-item" data-category="category1"><img src="../6/image/4.png"></div>
+                    <div class="grid-item" data-category="category1"><img src="../6/image/5.jpg"></div>
+                    <div class="grid-item" data-category="category1"><img src="../6/image/6.png"></div>
+                    <div class="grid-item" data-category="category1"><img src="../6/image/7.png"></div>
+                    <div class="grid-item" data-category="category1"><img src="../6/image/8.png"></div>
+                    <div class="grid-item" data-category="category1"><img src="../6/image/9.png"></div>
+                    <div class="grid-item" data-category="category1"><img src="../6/image/10.jpg"></div>
+
+                    <div class="grid-item" data-category="category2"><img src="../6/image/11.jpg"></div>
+                    <div class="grid-item" data-category="category2"><img src="../6/image/12.png"></div>
+                    <div class="grid-item" data-category="category2"><img src="../6/image/13.png"></div>
+                    <div class="grid-item" data-category="category2"><img src="../6/image/14.png"></div>
+                    <div class="grid-item" data-category="category2"><img src="../6/image/15.jpg"></div>
+                    <div class="grid-item" data-category="category2"><img src="../6/image/16.png"></div>
+                    <div class="grid-item" data-category="category2"><img src="../6/image/17.png"></div>
+                    <div class="grid-item" data-category="category2"><img src="../6/image/18.png"></div>
+                    <div class="grid-item" data-category="category2"><img src="../6/image/19.png"></div>
+                    <div class="grid-item" data-category="category2"><img src="../6/image/20.jpg"></div>
+                    
+                    <div class="grid-item"><img src="../6/image/21.png" ></div>
+                    <div class="grid-item"><img src="../6/image/22.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/23.png" ></div>
+                    <div class="grid-item"><img src="../6/image/24.png"></div>
+                    <div class="grid-item"><img src="../6/image/25.png" ></div>
+                    <div class="grid-item"><img src="../6/image/26.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/27.png" ></div>
+                    <div class="grid-item"><img src="../6/image/28.png"></div>
+                    <div class="grid-item"><img src="../6/image/29.png" ></div>
+                    <div class="grid-item"><img src="../6/image/30.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/31.png" ></div>
+                    <div class="grid-item"><img src="../6/image/32.png"></div>
+                    <div class="grid-item"><img src="../6/image/33.png" ></div>
+                    <div class="grid-item"><img src="../6/image/10.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/11.png" ></div>
+                    <div class="grid-item"><img src="../6/image/12.png"></div>
+                    <div class="grid-item"><img src="../6/image/13.png" ></div>
+                    <div class="grid-item"><img src="../6/image/14.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/15.png" ></div>
+                    <div class="grid-item"><img src="../6/image/16.png"></div>
+                    <div class="grid-item"><img src="../6/image/17.png" ></div>
+                    <div class="grid-item"><img src="../6/image/18.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/19.png" ></div>
+                    <div class="grid-item"><img src="../6/image/20.png"></div>
+                    <div class="grid-item"><img src="../6/image/21.png" ></div>
+                    <div class="grid-item"><img src="../6/image/22.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/23.png" ></div>
+                    <div class="grid-item"><img src="../6/image/24.png"></div>
+                    <div class="grid-item"><img src="../6/image/25.png" ></div>
+                    <div class="grid-item"><img src="../6/image/26.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/27.png" ></div>
+                    <div class="grid-item"><img src="../6/image/28.png"></div>
+                    <div class="grid-item"><img src="../6/image/29.png" ></div>
+                    <div class="grid-item"><img src="../6/image/30.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/31.png" ></div>
+                    <div class="grid-item"><img src="../6/image/32.png"></div>
+                    <div class="grid-item"><img src="../6/image/33.png" ></div>
+                    <div class="grid-item"><img src="../6/image/34.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/35.png" ></div>
+                    <div class="grid-item"><img src="../6/image/36.png"></div>
+                    <div class="grid-item"><img src="../6/image/37.png" ></div>
+                    <div class="grid-item"><img src="../6/image/38.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/39.png" ></div>
+                    <div class="grid-item"><img src="../6/image/40.png"></div>
+                    <div class="grid-item"><img src="../6/image/41.png" ></div>
+                    <div class="grid-item"><img src="../6/image/42.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/43.png" ></div>
+                    <div class="grid-item"><img src="../6/image/44.png"></div>
+                    <div class="grid-item"><img src="../6/image/45.png" ></div>
+                    <div class="grid-item"><img src="../6/image/46.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/47.png" ></div>
+                    <div class="grid-item"><img src="../6/image/48.png"></div>
+                    <div class="grid-item"><img src="../6/image/49.png" ></div>
+                    <div class="grid-item"><img src="../6/image/50.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/51.png" ></div>
+                    <div class="grid-item"><img src="../6/image/52.png"></div>
+                    <div class="grid-item"><img src="../6/image/53.png" ></div>
+                    <div class="grid-item"><img src="../6/image/54.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/55.png" ></div>
+                    <div class="grid-item"><img src="../6/image/56.png"></div>
+                    <div class="grid-item"><img src="../6/image/57.png" ></div>
+                    <div class="grid-item"><img src="../6/image/58.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/59.png" ></div>
+                    <div class="grid-item"><img src="../6/image/60.png"></div>
+                    <div class="grid-item"><img src="../6/image/61.png" ></div>
+                    <div class="grid-item"><img src="../6/image/62.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/63.png" ></div>
+                    <div class="grid-item"><img src="../6/image/64.png"></div>
+                    <div class="grid-item"><img src="../6/image/65.png" ></div>
+                    <div class="grid-item"><img src="../6/image/66.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/67.png" ></div>
+                    <div class="grid-item"><img src="../6/image/68.png"></div>
+                    <div class="grid-item"><img src="../6/image/69.png" ></div>
+                    <div class="grid-item"><img src="../6/image/70.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/71.png" ></div>
+                    <div class="grid-item"><img src="../6/image/72.png"></div>
+                    <div class="grid-item"><img src="../6/image/73.png" ></div>
+                    <div class="grid-item"><img src="../6/image/74.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/75.png" ></div>
+                    <div class="grid-item"><img src="../6/image/76.png"></div>
+                    <div class="grid-item"><img src="../6/image/77.png" ></div>
+                    <div class="grid-item"><img src="../6/image/78.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/79.png" ></div>
+                    <div class="grid-item"><img src="../6/image/80.png"></div>
+                    <div class="grid-item"><img src="../6/image/81.png" ></div>
+
+
+                    <div class="grid-item"><img src="../6/image/71.png" ></div>
+                    <div class="grid-item"><img src="../6/image/72.png"></div>
+                    <div class="grid-item"><img src="../6/image/73.png" ></div>
+                    <div class="grid-item"><img src="../6/image/74.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/75.png" ></div>
+                    <div class="grid-item"><img src="../6/image/76.png"></div>
+                    <div class="grid-item"><img src="../6/image/77.png" ></div>
+                    <div class="grid-item"><img src="../6/image/78.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/79.png" ></div>
+                    <div class="grid-item"><img src="../6/image/80.png"></div>
+                    <div class="grid-item"><img src="../6/image/81.png" ></div>
+
+
+                    <div class="grid-item"><img src="../6/image/71.png" ></div>
+                    <div class="grid-item"><img src="../6/image/72.png"></div>
+                    <div class="grid-item"><img src="../6/image/73.png" ></div>
+                    <div class="grid-item"><img src="../6/image/74.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/75.png" ></div>
+                    <div class="grid-item"><img src="../6/image/76.png"></div>
+                    <div class="grid-item"><img src="../6/image/77.png" ></div>
+                    <div class="grid-item"><img src="../6/image/78.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/79.png" ></div>
+                    <div class="grid-item"><img src="../6/image/80.png"></div>
+                    <div class="grid-item"><img src="../6/image/81.png" ></div>
+
+
+                    <div class="grid-item"><img src="../6/image/82.png" ></div>
+                    <div class="grid-item"><img src="../6/image/83.png"></div>
+                    <div class="grid-item"><img src="../6/image/84.png" ></div>
+                    <div class="grid-item"><img src="../6/image/85.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/86.png" ></div>
+                    <div class="grid-item"><img src="../6/image/87.png"></div>
+                    <div class="grid-item"><img src="../6/image/88.png" ></div>
+                    <div class="grid-item"><img src="../6/image/89.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/90.png" ></div>
+                    <div class="grid-item"><img src="../6/image/91.png"></div>
+                    <div class="grid-item"><img src="../6/image/92.png" ></div>
+
+
+                    <div class="grid-item"><img src="../6/image/93.png" ></div>
+                    <div class="grid-item"><img src="../6/image/94.png"></div>
+                    <div class="grid-item"><img src="../6/image/95.png" ></div>
+                    <div class="grid-item"><img src="../6/image/96.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/97.png" ></div>
+                    <div class="grid-item"><img src="../6/image/98.png"></div>
+                    <div class="grid-item"><img src="../6/image/99.png" ></div>
+                    <div class="grid-item"><img src="../6/image/100.jpg" ></div>
+                    <div class="grid-item"><img src="../6/image/101.png" ></div>
+                    <div class="grid-item"><img src="../6/image/102.png"></div>
+                    <div class="grid-item"><img src="../6/image/103.png" ></div>
+                    <!-- Add additional images here up to 120 -->
+                </div>
+
+        </div>
+
+        <script src="script.js"></script>
 
 </div>
-
-<script src="script.js"></script>
 
 </body>
 

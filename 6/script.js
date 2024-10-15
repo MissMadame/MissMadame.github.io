@@ -1,56 +1,55 @@
-let scrollAmount = 100; // Adjust this to control how much each click scrolls
-
-function scrollUp() {
-    window.scrollBy(0, -scrollAmount); // Scroll up by the specified amount
-}
-
-function scrollDown() {
-    window.scrollBy(0, scrollAmount); // Scroll down by the specified amount
-}
-
-
 let columns = 12;
-let lastScrollTop = 0;
-let isUpdating = false;
+let changeInterval = null; // Variable to store interval ID for gradual change
 
 function updateGrid() {
     const grid = document.querySelector('.column-80 .grid');
     grid.style.gridTemplateColumns = `repeat(${columns}, 1fr)`;
 }
 
-window.addEventListener('scroll', function () {
-    if (isUpdating) return; // Skip if still updating
+// Gradually increase or decrease columns
+function changeColumns(targetColumns) {
+    clearInterval(changeInterval); // Clear any ongoing interval
 
-    isUpdating = true;
-    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Gradually adjust columns
+    changeInterval = setInterval(() => {
+        if (columns < targetColumns) {
+            columns += 1;
+            updateGrid();
+        } else if (columns > targetColumns) {
+            columns -= 1;
+            updateGrid();
+        } else {
+            clearInterval(changeInterval); // Stop interval when target is reached
+        }
+    }, 100); // Adjust interval time for speed (100ms for smoother changes)
+}
 
-    if (currentScrollTop > lastScrollTop) {
-        if (columns > 1) columns -= 1;
-    } else {
-        if (columns < 20) columns += 1;
-    }
+// Increase columns when the increase button is clicked
+function increaseColumns() {
+    changeColumns(columns < 20 ? columns + 1 : columns); // Targeting gradual increase up to max 20
+}
 
-    updateGrid();
+// Decrease columns when the decrease button is clicked
+function decreaseColumns() {
+    changeColumns(columns > 1 ? columns - 1 : columns); // Targeting gradual decrease down to min 1
+}
 
-    lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
-    setTimeout(() => isUpdating = false, 100); // Delay for smoother updates
-});
+// Add event listeners to buttons
+document.querySelector('.button1').addEventListener('click', increaseColumns);
+document.querySelector('.button2').addEventListener('click', decreaseColumns);
 
 function showCategory(category) {
     const allItems = document.querySelectorAll('.column-80 .grid-item');
 
     if (category === "homepage") {
-        // Show all items if "homepage" is clicked
         allItems.forEach(item => {
             item.style.display = 'flex';
         });
     } else {
-        // Hide all items initially
         allItems.forEach(item => {
             item.style.display = 'none';
         });
 
-        // Show only items with the selected category
         const categoryItems = document.querySelectorAll(`.column-80 .grid-item[data-category="${category}"]`);
         categoryItems.forEach(item => {
             item.style.display = 'flex';
@@ -62,12 +61,10 @@ function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
     document.querySelector('.column-20').classList.toggle('dark-mode');
     document.querySelector('.column-80').classList.toggle('dark-mode');
-
-    // Toggle dark mode on all grid items
+    document.querySelector('.header').classList.toggle('dark-mode');
     const gridItems = document.querySelectorAll('.grid-item');
     gridItems.forEach(item => item.classList.toggle('dark-mode'));
 
-    // Update button icon and tooltip for feedback
     const darkModeButton = document.querySelector('.button3');
     if (document.body.classList.contains('dark-mode')) {
         darkModeButton.textContent = '☀️';
