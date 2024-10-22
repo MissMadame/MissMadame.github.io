@@ -43,16 +43,18 @@ function showCategory(category) {
 
     if (category === "homepage") {
         allItems.forEach(item => {
-            item.style.display = 'flex';
+            item.style.display = 'flex'; // Show all items
         });
     } else {
         allItems.forEach(item => {
-            item.style.display = 'none';
+            item.style.display = 'none'; // Hide all items by default
         });
 
-        const categoryItems = document.querySelectorAll(`.column-80 .grid-item[data-category="${category}"]`);
-        categoryItems.forEach(item => {
-            item.style.display = 'flex';
+        allItems.forEach(item => {
+            const categories = item.getAttribute('data-category').split(" ");
+            if (categories.includes(category)) {
+                item.style.display = 'flex'; // Show items that match the category
+            }
         });
     }
 }
@@ -62,15 +64,76 @@ function toggleDarkMode() {
     document.querySelector('.column-20').classList.toggle('dark-mode');
     document.querySelector('.column-80').classList.toggle('dark-mode');
     document.querySelector('.header').classList.toggle('dark-mode');
-    const gridItems = document.querySelectorAll('.grid-item');
+    
+    // Select both .grid-item and .grid-item2
+    const gridItems = document.querySelectorAll('.grid-item, .grid-item2');
     gridItems.forEach(item => item.classList.toggle('dark-mode'));
+
+    // Apply dark mode to all buttons
+    const buttons = document.querySelectorAll('button');
+    buttons.forEach(button => button.classList.toggle('dark-mode'));
 
     const darkModeButton = document.querySelector('.button3');
     if (document.body.classList.contains('dark-mode')) {
-        darkModeButton.textContent = '☀️';
+        darkModeButton.textContent = 'lightmode';
         darkModeButton.title = 'Switch to Light Mode';
     } else {
-        darkModeButton.textContent = '🌙';
+        darkModeButton.textContent = 'darkmode';
         darkModeButton.title = 'Switch to Dark Mode';
     }
 }
+
+
+    // Function to generate random color
+    function getRandomColor() {
+        const letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    // Add event listeners to all grid items
+    const gridItems = document.querySelectorAll('.grid-item2');
+
+    gridItems.forEach(item => {
+        item.addEventListener('mouseover', function() {
+            // Change text color to random color on hover
+            const categoryText = this.querySelector('.category');
+            categoryText.style.color = getRandomColor();
+        });
+
+        item.addEventListener('mouseout', function() {
+            // Reset the text color when the mouse leaves
+            const categoryText = this.querySelector('.category');
+            categoryText.style.color = ''; // You can set it to a specific color if needed
+        });
+    });
+
+
+// Function to generate random color
+function getRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+// Select all buttons whose class starts exactly with "button"
+const buttons = document.querySelectorAll('button[class^="button"]');
+
+buttons.forEach(button => {
+    button.addEventListener('mouseover', function() {
+        // Change the background color of the button to a random color
+        this.style.backgroundColor = getRandomColor();
+    });
+
+    button.addEventListener('mouseout', function() {
+        // Reset the background color when the mouse leaves
+        this.style.backgroundColor = ' #767676'; // Corrected: removed semicolon from color value
+    });
+});
+
