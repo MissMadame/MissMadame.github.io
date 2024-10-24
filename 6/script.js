@@ -83,44 +83,30 @@ function toggleDarkMode() {
     }
 }
 
+// Function to generate random bright, saturated colors
+function getRandomColor() {
+    const hue = Math.floor(Math.random() * 360); // Hue can be any value (0 to 360)
+    const saturation = Math.floor(Math.random() * 50) + 50; // Saturation: 50% to 100%
+    const lightness = Math.floor(Math.random() * 30) + 50; // Lightness: 50% to 80% for brightness
+    return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+}
 
-    // Function to generate random color
-    function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-            color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-    }
+// Add event listeners to all grid items
+const gridItems = document.querySelectorAll('.grid-item2');
 
-    // Add event listeners to all grid items
-    const gridItems = document.querySelectorAll('.grid-item2');
-
-    gridItems.forEach(item => {
-        item.addEventListener('mouseover', function() {
-            // Change text color to random color on hover
-            const categoryText = this.querySelector('.category');
-            categoryText.style.color = getRandomColor();
-        });
-
-        item.addEventListener('mouseout', function() {
-            // Reset the text color when the mouse leaves
-            const categoryText = this.querySelector('.category');
-            categoryText.style.color = ''; // You can set it to a specific color if needed
-        });
+gridItems.forEach(item => {
+    item.addEventListener('mouseover', function() {
+        // Change text color to random color on hover
+        const categoryText = this.querySelector('.category');
+        categoryText.style.color = getRandomColor();
     });
 
-
-// Function to generate random color
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
+    item.addEventListener('mouseout', function() {
+        // Reset the text color when the mouse leaves
+        const categoryText = this.querySelector('.category');
+        categoryText.style.color = ''; // Reset to original color
+    });
+});
 
 // Select all buttons whose class starts exactly with "button"
 const buttons = document.querySelectorAll('button[class^="button"]');
@@ -133,7 +119,6 @@ buttons.forEach(button => {
 
     button.addEventListener('mouseout', function() {
         // Reset the background color when the mouse leaves
-        this.style.backgroundColor = ' #767676'; // Corrected: removed semicolon from color value
+        this.style.backgroundColor = '#767676'; // Default background color
     });
 });
-

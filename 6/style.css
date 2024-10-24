@@ -69,7 +69,7 @@ body.dark-mode .grid-item2 {
     font-size: 12px;
     background-color: #767676;
     color: #ffffff;
-    transition: background-color 0.3s ease, border-radius 0.3s ease, font-weight 0.3s ease;
+    transition: background-color 0.5s ease, border-radius 0.5s ease, font-weight 0.5s ease;
     border-radius: 5px;
     font-family: 'Bugrino';
     font-weight: normal;
@@ -135,7 +135,7 @@ body.dark-mode .grid-item2 {
     align-items: center;
     border-radius: 5px;
     border: lightgray 1px solid;
-    transition: border-radius 0.3s ease;
+    transition: border-radius 0.5s ease;
 }
 
 .grid-item:hover {
@@ -150,7 +150,7 @@ body.dark-mode .grid-item2 {
     outline: 1px solid black;
     border-radius: 5px;
     font-size: 20px;
-    transition: background-color 0.3s ease, border-radius 0.3s ease,font-weight 0.3s ease;
+    transition: background-color 0.5s ease, border-radius 0.5s ease,font-weight 0.5s ease;
 }
 
 .grid-item2:hover {
@@ -159,7 +159,7 @@ body.dark-mode .grid-item2 {
 }
 
 .grid-item2 .category {
-    transition: color 0.3s ease; /* Smooth transition for the text color */
+    transition: color 0.5s ease; /* Smooth transition for the text color */
 }
 
 .grid-item img {
