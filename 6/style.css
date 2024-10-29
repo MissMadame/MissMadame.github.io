@@ -193,7 +193,6 @@ body.dark-mode .grid-item2 {
     padding: 5px; /* Smaller padding for a compact size */
     border: 1px solid gray;
     border-radius: 50%; /* Makes the button round */
-    cursor: pointer;
     font-size: 15px; /* Smaller font size */
     width: 30px; /* Width for a small round button */
     height: 30px; /* Height for a small round button */
@@ -209,4 +208,17 @@ body.dark-mode .grid-item2 {
 
 .grid-item.span-four .close-button {
     display: block; /* Show button when the item is expanded */
+}
+
+.image-info {
+    position: absolute;
+    bottom: 5px; /* Position above the button */
+    left: 10px;
+    color: gray;
+    background: white;
+    font-size: 10px;
+    padding: 3px 6px;
+    border-radius: 4px;
+    display: none; /* Hidden by default */
+    z-index: 1;
 }

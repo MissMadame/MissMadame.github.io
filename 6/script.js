@@ -124,10 +124,9 @@ buttons.forEach(button => {
 
 
 // Select all grid items with images
-// Select all grid items with images
 const gridItems = document.querySelectorAll('.grid-item');
 
-// Function to handle the click event for toggling size and button display
+// Function to handle the click event for toggling size and showing info
 function toggleImageSize(event) {
     const clickedItem = event.currentTarget;
     const isExpanded = clickedItem.classList.toggle('span-four'); // Toggle size
@@ -141,14 +140,30 @@ function toggleImageSize(event) {
         clickedItem.appendChild(closeButton);
     }
 
+    let infoBox = clickedItem.querySelector('.image-info');
+    if (!infoBox) {
+        infoBox = document.createElement('div');
+        infoBox.classList.add('image-info');
+        
+        // Set just the date and author info here, without labels
+        const date = '2023-10-29'; // Example date, replace as needed
+        const author = 'John Doe'; // Example author, replace as needed
+        infoBox.textContent = `${date} | ${author}`;
+        
+        clickedItem.appendChild(infoBox);
+    }
+
+
     // Get the image source URL from the 'href' or 'src' attribute
     const imageLink = clickedItem.querySelector('a') ? clickedItem.querySelector('a').href : clickedItem.querySelector('img').src;
 
-    // Show the button if expanded, else hide it
+    // Show the button and info if expanded, else hide them
     closeButton.style.display = isExpanded ? 'block' : 'none';
+    infoBox.style.display = isExpanded ? 'block' : 'none';
 
     // Add click event to the button to go to the image source
-    closeButton.onclick = () => {
+    closeButton.onclick = (e) => {
+        e.stopPropagation(); // Prevents the button click from toggling the image size
         window.open(imageLink, '_blank'); // Open link in a new tab
     };
 }
