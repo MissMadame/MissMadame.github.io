@@ -53,6 +53,11 @@ body.dark-mode .grid-item2 {
     outline: 1px solid white; /* Change outline to white in dark mode */
 }
 
+.highlighted.dark-mode{
+    border:1px solid white; /* Fixed border color */
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.773); /* Optional shadow */
+}
+
 .button-container {
     display: flex;
     background-color: transparent !important; /* Force transparency in all cases */
