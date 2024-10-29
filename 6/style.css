@@ -222,3 +222,17 @@ body.dark-mode .grid-item2 {
     display: none; /* Hidden by default */
     z-index: 1;
 }
+
+/* Tooltip styling */
+.cursor-tooltip {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    pointer-events: none; /* Prevents interfering with the cursor */
+    display: none; /* Hidden by default */
+    z-index: 1000;
+    white-space: pre-line; /* Allows multi-line text */
+}

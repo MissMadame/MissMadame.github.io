@@ -173,6 +173,52 @@ gridItems.forEach(item => {
     item.addEventListener('click', toggleImageSize);
 });
 
+// Create and style tooltip element
+const tooltip = document.createElement('div');
+tooltip.classList.add('cursor-tooltip');
+document.body.appendChild(tooltip);
+
+// Define text for each category button (customize as needed)
+const categoryTexts = {
+    Bold: "So not expecting this",
+    Gradient: "Schrödinger's colors",
+    Soft: "Transitioning",
+    Circle: "Flattening everything out",
+    View: "On windy days",
+    Plant: "I hope to watch them grow up",
+    Lil_Monster: "If they were my friends",
+    If_it_moves: "Constantly changing",
+    When_it_writes: "...",
+    ABCabc: "game with 26"
+};
+
+// Function to show tooltip with dynamic text
+function showTooltip(event) {
+    const category = event.target.querySelector('.category').textContent;
+    tooltip.textContent = categoryTexts[category] || "";
+    tooltip.style.display = 'block';
+}
+
+// Function to hide tooltip
+function hideTooltip() {
+    tooltip.style.display = 'none';
+}
+
+// Function to move tooltip with cursor
+function moveTooltip(event) {
+    tooltip.style.top = `${event.clientY + 15}px`; // 15px below the cursor
+    tooltip.style.left = `${event.clientX + 15}px`; // 15px to the right of the cursor
+}
+
+// Attach event listeners to each category button
+const categoryButtons = document.querySelectorAll('.grid-item2');
+categoryButtons.forEach(button => {
+    button.addEventListener('mouseover', showTooltip);
+    button.addEventListener('mouseout', hideTooltip);
+    button.addEventListener('mousemove', moveTooltip);
+});
+
 
 
 });
+
