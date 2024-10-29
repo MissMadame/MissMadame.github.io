@@ -121,4 +121,43 @@ buttons.forEach(button => {
         // Reset the background color when the mouse leaves
         this.style.backgroundColor = '#767676'; // Default background color
     });
+
+
+// Select all grid items with images
+// Select all grid items with images
+const gridItems = document.querySelectorAll('.grid-item');
+
+// Function to handle the click event for toggling size and button display
+function toggleImageSize(event) {
+    const clickedItem = event.currentTarget;
+    const isExpanded = clickedItem.classList.toggle('span-four'); // Toggle size
+
+    // Check if button already exists, if not, create one
+    let closeButton = clickedItem.querySelector('.close-button');
+    if (!closeButton) {
+        closeButton = document.createElement('button');
+        closeButton.classList.add('close-button');
+        closeButton.textContent = '🔗';
+        clickedItem.appendChild(closeButton);
+    }
+
+    // Get the image source URL from the 'href' or 'src' attribute
+    const imageLink = clickedItem.querySelector('a') ? clickedItem.querySelector('a').href : clickedItem.querySelector('img').src;
+
+    // Show the button if expanded, else hide it
+    closeButton.style.display = isExpanded ? 'block' : 'none';
+
+    // Add click event to the button to go to the image source
+    closeButton.onclick = () => {
+        window.open(imageLink, '_blank'); // Open link in a new tab
+    };
+}
+
+// Add click event listeners to all grid items
+gridItems.forEach(item => {
+    item.addEventListener('click', toggleImageSize);
+});
+
+
+
 });
