@@ -127,10 +127,21 @@ buttons.forEach(button => {
 // Select all grid items with images
 const gridItems = document.querySelectorAll('.grid-item');
 
+const imageMetadata = {
+    "image1": { date: "2023-01-10", author: "Alice Johnson" },
+    "image2": { date: "2023-02-15", author: "Bob Smith" },
+    "image3": { date: "2023-03-20", author: "Cathy Brown" },
+    // Add more images as needed
+};
+
 // Function to handle the click event for toggling size and showing info
 function toggleImageSize(event) {
     const clickedItem = event.currentTarget;
     const isExpanded = clickedItem.classList.toggle('span-four'); // Toggle size
+
+    // Retrieve the unique identifier
+    const imageId = clickedItem.getAttribute('data-id');
+    const metadata = imageMetadata[imageId];
 
     // Check if button already exists, if not, create one
     let closeButton = clickedItem.querySelector('.close-button');
@@ -145,29 +156,29 @@ function toggleImageSize(event) {
     if (!infoBox) {
         infoBox = document.createElement('div');
         infoBox.classList.add('image-info');
-        
-        // Set just the date and author info here, without labels
-        const date = '2023-10-29'; // Example date, replace as needed
-        const author = 'John Doe'; // Example author, replace as needed
+
+        // Use the metadata if it exists, otherwise fallback to default
+        const date = metadata ? metadata.date : '2024';
+        const author = metadata ? metadata.author : 'Unknown Author';
         infoBox.textContent = `${date} | ${author}`;
-        
+
         clickedItem.appendChild(infoBox);
     }
 
-
-    // Get the image source URL from the 'href' or 'src' attribute
-    const imageLink = clickedItem.querySelector('a') ? clickedItem.querySelector('a').href : clickedItem.querySelector('img').src;
-
-    // Show the button and info if expanded, else hide them
+    // Show/hide the infoBox and closeButton based on expansion state
     closeButton.style.display = isExpanded ? 'block' : 'none';
     infoBox.style.display = isExpanded ? 'block' : 'none';
 
-    // Add click event to the button to go to the image source
+    // Add click event for the source button to open image source
     closeButton.onclick = (e) => {
-        e.stopPropagation(); // Prevents the button click from toggling the image size
-        window.open(imageLink, '_blank'); // Open link in a new tab
+        e.stopPropagation();
+        const imageLink = clickedItem.querySelector('a')
+            ? clickedItem.querySelector('a').href
+            : clickedItem.querySelector('img').src;
+        window.open(imageLink, '_blank');
     };
 }
+
 
 // Add click event listeners to all grid items
 gridItems.forEach(item => {
