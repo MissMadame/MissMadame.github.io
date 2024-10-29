@@ -235,4 +235,10 @@ body.dark-mode .grid-item2 {
     display: none; /* Hidden by default */
     z-index: 1000;
     white-space: pre-line; /* Allows multi-line text */
+    border-radius: 0px;
+}
+
+.highlighted {
+    border: 1px solid black; /* Fixed border color */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
 }

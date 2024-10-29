@@ -91,6 +91,7 @@ function getRandomColor() {
     return `hsl(${hue}, ${saturation}%, ${lightness}%)`;
 }
 
+
 // Add event listeners to all grid items
 const gridItems = document.querySelectorAll('.grid-item2');
 
@@ -187,8 +188,8 @@ const categoryTexts = {
     "View": "On windy days",
     "Plant": "I hope to watch them grow up",
     "Lil Monster": "If they were my friends",
-    "If it moves": "Constantly changing",
-    "When it writes": "...",
+    "If It Moves": "Constantly changing",
+    "When It Writes": "...",
     "ABCabc": "game with 26"
 };
 
@@ -227,3 +228,36 @@ function showTooltip(event) {
 
 });
 
+// Function to highlight category images and text
+function highlightCategoryImages(event) {
+    const categoryButton = event.currentTarget;
+    const categoryText = categoryButton.querySelector('.category');
+    const highlightColor = getRandomColor();
+
+    // Set the random color to the category text only
+    categoryText.style.color = highlightColor;
+
+    // Add 'highlighted' class to the images in the grid that match the category
+    document.querySelectorAll('.grid-item').forEach(item => {
+        const categories = item.getAttribute('data-category').split(" ");
+        if (categories.includes(categoryText.textContent.trim())) {
+            item.classList.add('highlighted');
+        }
+    });
+}
+
+// Function to remove the highlight effect
+function removeHighlight(event) {
+    const categoryText = event.currentTarget.querySelector('.category');
+    categoryText.style.color = ''; // Reset category text color
+
+    document.querySelectorAll('.grid-item').forEach(item => {
+        item.classList.remove('highlighted'); // Remove highlighted class
+    });
+}
+
+// Attach event listeners to each category button
+document.querySelectorAll('.grid-item2').forEach(button => {
+    button.addEventListener('mouseover', highlightCategoryImages);
+    button.addEventListener('mouseout', removeHighlight);
+});
