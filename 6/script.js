@@ -180,16 +180,16 @@ document.body.appendChild(tooltip);
 
 // Define text for each category button (customize as needed)
 const categoryTexts = {
-    Bold: "So not expecting this",
-    Gradient: "Schrödinger's colors",
-    Soft: "Transitioning",
-    Circle: "Flattening everything out",
-    View: "On windy days",
-    Plant: "I hope to watch them grow up",
-    Lil_Monster: "If they were my friends",
-    If_it_moves: "Constantly changing",
-    When_it_writes: "...",
-    ABCabc: "game with 26"
+    "Bold" : "So not expecting this",
+    "Gradient" : "Schrödinger's colors",
+    "Soft" : "Transitioning",
+    "Circle": "Flattening everything out",
+    "View": "On windy days",
+    "Plant": "I hope to watch them grow up",
+    "Lil Monster": "If they were my friends",
+    "If it moves": "Constantly changing",
+    "When it writes": "...",
+    "ABCabc": "game with 26"
 };
 
 // Function to show tooltip with dynamic text
@@ -218,7 +218,12 @@ categoryButtons.forEach(button => {
     button.addEventListener('mousemove', moveTooltip);
 });
 
-
+function showTooltip(event) {
+    const category = event.target.querySelector('.category').textContent.trim();
+    console.log(`Hovering over category: ${category}`); // Debugging line
+    tooltip.textContent = categoryTexts[category] || "";
+    tooltip.style.display = 'block';
+}
 
 });
 
