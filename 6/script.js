@@ -272,3 +272,35 @@ document.querySelectorAll('.grid-item2').forEach(button => {
     button.addEventListener('mouseover', highlightCategoryImages);
     button.addEventListener('mouseout', removeHighlight);
 });
+
+// Define tooltip text for each button
+const buttonTooltips = {
+    button1: "keep clicking",
+    button2: "keep clicking",
+    button3: "night night",
+    button4: "what is this?",
+    button5: "Let's see them all"
+};
+
+// Select the tooltip element
+const tooltip = document.getElementById("button-tooltip");
+
+// Show tooltip on mouse over
+document.querySelectorAll('button[class^="button"]').forEach(button => {
+    button.addEventListener('mouseover', function(event) {
+        const buttonId = this.classList[0]; // Assumes button classes are named as button1, button2, etc.
+        tooltip.textContent = buttonTooltips[buttonId] || ""; // Set tooltip text based on button class
+        tooltip.style.display = 'block';
+    });
+
+    // Hide tooltip on mouse out
+    button.addEventListener('mouseout', () => {
+        tooltip.style.display = 'none';
+    });
+
+    // Move tooltip with the cursor
+    button.addEventListener('mousemove', (event) => {
+        tooltip.style.top = `${event.clientY + 15}px`; // Position below cursor
+        tooltip.style.left = `${event.clientX + 15}px`; // Position to the right of cursor
+    });
+});

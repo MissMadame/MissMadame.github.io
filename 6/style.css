@@ -253,3 +253,13 @@ body.dark-mode .image-info{
     border: 1px solid black; /* Fixed border color */
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); /* Optional shadow */
 }
+
+.tooltip {
+    position: fixed;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    pointer-events: none; /* Prevents tooltip from interfering with cursor */
+    z-index: 1000; /* Ensures it stays on top of other elements */
+}
