@@ -95,9 +95,13 @@ body.dark-mode .grid-item2 {
 }
 
 .button5 {
-    flex: 0 0 20%;
+    flex: 0 0 16%;
     margin-left: -15px;
     margin-right: auto; /* Pushes button2-4 to the right */
+
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Ensures no overflow */
+    text-overflow: ellipsis; /* Adds ellipsis (...) if the text overflows */
 }
 
 .button1, .button2, .button3 {
@@ -118,7 +122,7 @@ body.dark-mode .grid-item2 {
     position: fixed;
     top: 80px; /* Positions it below the header */
     left: 10px;
-    width: 19%;
+    width: 15%;
     height: calc(100vh - 80px); /* Makes it full height, minus header */
     overflow-y: auto; /* Enables scrolling within the sidebar */
     padding: 10px;
@@ -128,8 +132,8 @@ body.dark-mode .grid-item2 {
 }
 
 .column-80 {
-    margin-left: 22%; /* Offsets the main content to the right of the sidebar */
-    width: 80%;
+    margin-left: 17%; /* Offsets the main content to the right of the sidebar */
+    width: 85%;
     padding: 10px;
 }
 
@@ -164,7 +168,7 @@ body.dark-mode .grid-item2 {
     align-items: center;
     outline: 1px solid black;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 15px;
     transition: background-color 0.5s ease, border-radius 0.5s ease,font-weight 0.5s ease;
 }
 

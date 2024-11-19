@@ -278,7 +278,7 @@ const buttonTooltips = {
     button1: "keep clicking",
     button2: "keep clicking",
     button3: "night night",
-    button4: "what is this?",
+    button4: "?",
     button5: "Let's see them all"
 };
 

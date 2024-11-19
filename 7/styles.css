@@ -1,0 +1,299 @@
+/* Font Definitions */
+@font-face {
+    font-family: 'tabac G3';
+    src: url('assets/tabac/Tabac_Basic/Tabac Medium G3.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tabac G3';
+    src: url('assets/tabac/Tabac_Basic/Tabac Bold G3.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'tabac-glam G2';
+    src: url('assets/Tabac-Glam/Tabac Glam G2 Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+
+.logo-image {
+    display: block; /* Centers the logo */
+    margin: 0 auto; /* Centers horizontally */
+    width: 100px; /* Explicitly set width */
+    max-width: 100%; /* Ensures it doesn't exceed parent width */
+    margin-top: -10px;
+}
+
+
+
+/* Body Background */
+body {
+    background: linear-gradient(to bottom, #70CDDD, white, white);
+}
+
+/* Text Display */
+.text-display {
+    font-family: 'tabac G3';
+    font-size: 20px;
+    text-align: center; 
+}
+
+/* Main Heading */
+h1 {
+    text-align: center;
+    font-family: 'tabac-glam G2';
+    font-size: 50px;
+    color: black;
+    text-transform: uppercase;
+    line-height: 3;
+}
+h1.reached-500 {
+    color: #70CDDD; /* Change to blue */
+    animation: pop 0.5s ease-in-out; /* Optional animation */
+}
+
+/* Animation (Optional) */
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Highlighted Text */
+.highlight {
+    font-weight: bold;
+    
+    border-radius: 4px;
+}
+
+/* Grid Container */
+.container {
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: 10% 45% 45%; /* Defines three columns */
+    gap: 20px;
+}
+
+/* Rectangles for Left and Right Columns */
+.rectangles, .rectangles2 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Basic Rectangle Styles */
+.rectangle {
+    width: 50px;
+    height: 7.2px;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+/* Left Side Rectangles */
+.rectangle-1 { margin-left: -8px; width: 100px; } /* -8 */
+.rectangle-3 { margin-left: 57px; width: 80px; } /* +7 */
+.rectangle-5 { margin-left: 95px; width: 60px; } /* -5 */
+.rectangle-7 { margin-left: 160px; width: 50px; } /* +10 */
+.rectangle-9 { margin-left: 193px; width: 55px; } /* -7 */
+.rectangle-11 { margin-left: 227px; width: 60px; } /* +7 */
+.rectangle-13 { margin-left: 246px; width: 65px; } /* +6 */
+.rectangle-15 { margin-left: 242px; width: 70px; } /* -8 */
+.rectangle-17 { margin-left: 268px; width: 75px; } /* +8 */
+.rectangle-19 { margin-left: 266px; width: 80px; } /* -4 */
+.rectangle-21 { margin-left: 288px; width: 77px; } /* +8 */
+.rectangle-23 { margin-left: 284px; width: 73px; } /* -6 */
+.rectangle-25 { margin-left: 305px; width: 69px; } /* +5 */
+.rectangle-27 { margin-left: 316px; width: 65px; } /* +6 */
+.rectangle-29 { margin-left: 319px; width: 61px; } /* -1 */
+.rectangle-31 { margin-left: 340px; width: 57px; } /* +10 */
+.rectangle-33 { margin-left: 336px; width: 53px; } /* -4 */
+.rectangle-35 { margin-left: 345px; width: 49px; } /* -5 */
+.rectangle-37 { margin-left: 363px; width: 45px; } /* +8 */
+.rectangle-39 { margin-left: 368px; width: 41px; } /* +8 */
+.rectangle-41 { margin-left: 363px; width: 37px; } /* -2 */
+.rectangle-43 { margin-left: 379px; width: 35px; } /* +9 */
+.rectangle-45 { margin-left: 373px; width: 50px; } /* -2 */
+.rectangle-47 { margin-left: 387px; width: 65px; } /* +7 */
+.rectangle-49 { margin-left: 383px; width: 80px; } /* -2 */
+.rectangle-51 { margin-left: 398px; width: 75px; } /* +8 */
+.rectangle-53 { margin-left: 389px; width: 70px; } /* -6 */
+.rectangle-55 { margin-left: 402px; width: 65px; } /* +2 */
+.rectangle-57 { margin-left: 396px; width: 60px; } /* -9 */
+.rectangle-59 { margin-left: 412px; width: 55px; } /* +2 */
+.rectangle-61 { margin-left: 408px; width: 50px; } /* -7 */
+.rectangle-63 { margin-left: 419px; width: 45px; } /* -1 */
+.rectangle-65 { margin-left: 428px; width: 40px; } /* +10 */
+.rectangle-67 { margin-left: 427px; width: 35px; } /* -3 */
+.rectangle-69 { margin-left: 431px; width: 50px; } /* -4 */
+.rectangle-71 { margin-left: 435px; width: 65px; } /* +0 */
+.rectangle-73 { margin-left: 452px; width: 80px; } /* +7 */
+.rectangle-75 { margin-left: 448px; width: 77px; } /* -2 */
+.rectangle-77 { margin-left: 463px; width: 73px; } /* +8 */
+.rectangle-79 { margin-left: 455px; width: 69px; } /* -5 */
+.rectangle-81 { margin-left: 462px; width: 65px; } /* -3 */
+.rectangle-83 { margin-left: 471px; width: 61px; } /* +2 */
+.rectangle-85 { margin-left: 476px; width: 50px; } /* +4 */
+.rectangle-87 { margin-left: 481px; width: 45px; } /* -5 */
+.rectangle-89 { margin-left: 493px; width: 40px; } /* +9 */
+.rectangle-91 { margin-left: 494px; width: 30px; } /* -3 */
+.rectangle-93 { margin-left: 506px; width: 50px; } /* +6 */
+.rectangle-95 { margin-left: 499px; width: 50px; } /* -4 */
+.rectangle-97 { margin-left: 496px; width: 35px; } /* -8 */
+.rectangle-99 { margin-left: 518px; width: 50px; } /* +6 */
+.rectangle-101 { margin-left: 511px; width: 65px; } /* -4 */
+.rectangle-103 { margin-left: 530px; width: 80px; } /* +5 */
+.rectangle-105 { margin-left: 523px; width: 75px; } /* -7 */
+.rectangle-107 { margin-left: 535px; width: 70px; } /* +5 */
+
+
+/* Right Side of the Pyramid (Rectangles 55-108) *//* Right Side of the Pyramid (Rectangles 55-108) */
+/* Right Side of the Pyramid (Rectangles 55-108) */
+.rectangle-2 { margin-left: 589px; margin-top: -9.2px; width: 100px; } /* +7 */
+.rectangle-4 { margin-left: 577px; margin-top: -18.4px; width: 60px; } /* -5 */
+.rectangle-6 { margin-left: 591px; margin-top: -18.4px; width: 72px; } /* +4 */
+.rectangle-8 { margin-left: 586px; margin-top: -18.4px; width: 40px; } /* -6 */
+.rectangle-10 { margin-left: 602px; margin-top: -18.4px; width: 55px; } /* +5 */
+.rectangle-12 { margin-left: 594px; margin-top: -18.4px; width: 90px; } /* -8 */
+.rectangle-14 { margin-left: 612px; margin-top: -18.4px; width: 35px; } /* +8 */
+.rectangle-16 { margin-left: 603px; margin-top: -18.4px; width: 50px; } /* -9 */
+.rectangle-18 { margin-left: 619px; margin-top: -18.4px; width: 80px; } /* +3 */
+.rectangle-20 { margin-left: 615px; margin-top: -18.4px; width: 60px; } /* -7 */
+.rectangle-22 { margin-left: 629px; margin-top: -18.4px; width: 47px; } /* +2 */
+.rectangle-24 { margin-left: 630px; margin-top: -18.4px; width: 70px; } /* -2 */
+.rectangle-26 { margin-left: 641px; margin-top: -18.4px; width: 42px; } /* +4 */
+.rectangle-28 { margin-left: 639px; margin-top: -18.4px; width: 65px; } /* -3 */
+.rectangle-30 { margin-left: 650px; margin-top: -18.4px; width: 37px; } /* +3 */
+.rectangle-32 { margin-left: 646px; margin-top: -18.4px; width: 82px; } /* -6 */
+.rectangle-34 { margin-left: 660px; margin-top: -18.4px; width: 55px; } /* +3 */
+.rectangle-36 { margin-left: 664px; margin-top: -18.4px; width: 40px; } /* +2 */
+.rectangle-38 { margin-left: 666px; margin-top: -18.4px; width: 75px; } /* -1 */
+.rectangle-40 { margin-left: 676px; margin-top: -18.4px; width: 67px; } /* +4 */
+.rectangle-42 { margin-left: 679px; margin-top: -18.4px; width: 48px; } /* +2 */
+.rectangle-44 { margin-left: 678px; margin-top: -18.4px; width: 58px; } /* -4 */
+.rectangle-46 { margin-left: 691px; margin-top: -18.4px; width: 72px; } /* +6 */
+.rectangle-48 { margin-left: 688px; margin-top: -18.4px; width: 37px; } /* -4 */
+.rectangle-50 { margin-left: 695px; margin-top: -18.4px; width: 68px; } /* -2 */
+.rectangle-52 { margin-left: 707px; margin-top: -18.4px; width: 85px; } /* +5 */
+.rectangle-54 { margin-left: 709px; margin-top: -18.4px; width: 40px; } /* +2 */
+.rectangle-56 { margin-left: 714px; margin-top: -18.4px; width: 35px; } /* +3 */
+.rectangle-58 { margin-left: 719px; margin-top: -18.4px; width: 65px; } /* +2 */
+.rectangle-60 { margin-left: 724px; margin-top: -18.4px; width: 50px; } /* +2 */
+.rectangle-62 { margin-left: 729px; margin-top: -18.4px; width: 78px; } /* +2 */
+.rectangle-64 { margin-left: 731px; margin-top: -18.4px; width: 55px; } /* -3 */
+.rectangle-66 { margin-left: 740px; margin-top: -18.4px; width: 72px; } /* +3 */
+.rectangle-68 { margin-left: 744px; margin-top: -18.4px; width: 45px; } /* +2 */
+.rectangle-70 { margin-left: 746px; margin-top: -18.4px; width: 85px; } /* -1 */
+.rectangle-72 { margin-left: 755px; margin-top: -18.4px; width: 40px; } /* -2 */
+.rectangle-74 { margin-left: 759px; margin-top: -18.4px; width: 60px; } /* +2 */
+.rectangle-76 { margin-left: 765px; margin-top: -18.4px; width: 67px; } /* +3 */
+.rectangle-78 { margin-left: 769px; margin-top: -18.4px; width: 35px; } /* -3 */
+.rectangle-80 { margin-left: 790px; margin-top: -18.4px; width: 75px; } /* +8 */
+.rectangle-82 { margin-left: 784px; margin-top: -18.4px; width: 58px; } /* -8 */
+.rectangle-84 { margin-left: 810px; margin-top: -18.4px; width: 90px; } /* +8 */
+.rectangle-86 { margin-left: 804px; margin-top: -18.4px; width: 42px; } /* -8 */
+.rectangle-88 { margin-left: 829px; margin-top: -18.4px; width: 70px; } /* +7 */
+.rectangle-90 { margin-left: 825px; margin-top: -18.4px; width: 50px; } /* -7 */
+.rectangle-92 { margin-left: 835px; margin-top: -18.4px; width: 65px; } /* +3 */
+.rectangle-94 { margin-left: 850px; margin-top: -18.4px; width: 48px; } /* -2 */
+.rectangle-96 { margin-left: 870px; margin-top: -18.4px; width: 82px; } /* +8 */
+.rectangle-98 { margin-left: 874px; margin-top: -18.4px; width: 55px; } /* -8 */
+.rectangle-100 { margin-left: 898px; margin-top: -18.4px; width: 67px; } /* -4 */
+.rectangle-102 { margin-left: 948px; margin-top: -18.4px; width: 77px; } /* -4 */
+.rectangle-104 { margin-left: 1004px; margin-top: -18.4px; width: 80px; } /* +2 */
+.rectangle-106 { margin-left: 1050px; margin-top: -18.4px; width: 110px; } /* -2 */
+.rectangle-108 { margin-left: 1096px; margin-top: -18.4px; width: 100px; } /* -6 */
+
+
+
+
+
+/* Continue the pattern as needed... */
+
+/* Slider Styling */
+.slider-container {
+    margin-left: -20px;
+}
+
+.slider {
+    writing-mode: bt-lr;
+    -webkit-appearance: slider-vertical;
+    height: 500px;
+}
+
+/* Smooth transition for the body background color */
+body {
+    transition: background-color 0.5s ease, background-image 0.5s ease;
+}
+
+/* Smooth transition for the title and text display colors */
+h1, #textDisplay {
+    transition: color 0.5s ease;
+}
+
+/* Smooth transition for rectangle styles */
+.rectangles .rectangle {
+    transition: background-color 0.5s ease, border 0.5s ease, width 0.5s ease, border-radius 0.5s ease;
+}
+
+/* Smooth transition for the logo */
+.logo-image {
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+/* Sparkle Keyframe Animation */
+@keyframes sparkle {
+    0% {
+        opacity: 0.5;
+        transform: scale(1);
+        box-shadow: 0 0 0px rgba(255, 255, 255, 0.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        opacity: 0.5;
+        transform: scale(1);
+        box-shadow: 0 0 0px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Apply Sparkle Animation to Rectangles */
+.sparkle {
+    animation: sparkle 2s infinite;
+    animation-delay: calc(var(--index) * 0.1s); /* Staggered effect */
+    transition: all 0.5s ease-in-out;
+}
+
+.bodytext{
+    font-family: 'tabac G3';
+    font-size: 20px;
+    text-align: center; 
+
+    display: flex;
+}
+
+.full-page-image {
+    position: relative; /* Keeps it below everything */
+    width: 100%;
+    height: 100vh; /* Makes it the full height of the viewport */
+    background-image: url('assets/book info.png'); /* Replace with your image URL */
+    background-size: cover; /* Ensures the image covers the entire div */
+    background-position: center; /* Centers the image */
+    margin: 0;
+    padding: 0;
+    z-index: -1; /* Ensures it doesn't overlap with existing content */
+}
