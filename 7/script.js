@@ -1,17 +1,4 @@
-// Array of image URLs
-const images = [
-    "assets/kids/1.png",
-    "assets/kids/2.png",
-    "assets/kids/3.png",
-    "assets/kids/4.png",
-    "assets/kids/5.png",
-    "assets/kids/6.png",
-    "assets/kids/7.png",
-    "assets/kids/8.png",
-    "assets/kids/9.png",
-    "assets/kids/10.png",
-    "assets/kids/11.png"
-];
+
 
 const bookCounts = [ 25, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500];
 const impacts = [
