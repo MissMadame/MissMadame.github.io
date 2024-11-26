@@ -13,7 +13,7 @@ const images = [
     "assets/kids/11.png"
 ];
 
-const bookCounts = [0, 25, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500];
+const bookCounts = [ 25, 50, 100, 150, 200, 250, 300, 350, 400, 450, 500];
 const impacts = [
     "Ignite a love for reading in 5 children",
     "Stock a mini-library for a classroom",
@@ -35,10 +35,10 @@ function fillRectangles() {
     const textDisplayElement = document.getElementById("textDisplay");
     const logoElement = document.querySelector(".logo-image");
     const bodyElement = document.body;
+    const footerElement = document.getElementById("footer"); // Get the footer element
 
     const numberToFill = sliderValue * 10;
 
-    // Update rectangles' styles and animations
     rectangles.forEach((rectangle, index) => {
         const rectIndexFromBottom = rectangles.length - 1 - index;
 
@@ -52,8 +52,7 @@ function fillRectangles() {
         } else {
             // Remove sparkle animation
             rectangle.classList.remove("sparkle");
-
-            if (rectIndexFromBottom < numberToFill) {
+            if (parseInt(rectangle.className.replace(/^\D+/g, '')) < numberToFill) {
                 rectangle.style.backgroundColor = "#70CDDD";
                 rectangle.style.border = "1px solid #70CDDD";
                 rectangle.style.width = ""; // Reset
@@ -84,6 +83,10 @@ function fillRectangles() {
 
         logoElement.src = "assets/logo white.svg";
         logoElement.style.transform = "scale(1.1)"; // Slight enlargement for effect
+
+        // Update footer styles for 500 books
+        footerElement.style.backgroundColor = "white";
+        footerElement.style.color = "#70CDDD";
     } else {
         titleElement.textContent = "Books Are Wings";
         bodyElement.style.backgroundColor = "white";
@@ -94,8 +97,13 @@ function fillRectangles() {
 
         logoElement.src = "assets/logo.svg";
         logoElement.style.transform = "scale(1)"; // Reset size
+
+        // Reset footer styles
+        footerElement.style.backgroundColor = "#70CDDD";
+        footerElement.style.color = "white";
     }
 }
+
 
 // Attach the function to the slider's input event
 document.getElementById("slider").addEventListener("input", fillRectangles);
